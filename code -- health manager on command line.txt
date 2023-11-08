@@ -1,0 +1,82 @@
+def gettime():
+    ''' this function is to import date and time'''
+    import datetime
+    return datetime.datetime.now()
+
+k = int(input("Enter client number\n 1:Shivansh\n 2:Ved\n 3:Sara\n"))
+
+if k==1:
+    h = int(input("Press 1 to log data\nPress 2 to retrieve data\n" ))
+    if h==1:
+        log = int(input("Press 1 to enter Exercise\nPress 2 to enter Diet\n"))
+        if log==1:
+            value=input("type here\n")
+            with open("shivansh-ex.txt","a") as op:
+                op.write(str([str(gettime())])+": "+value+"\n")
+            print("successfully written")
+        elif log==2:
+            value = input("type here\n")
+            with open("shivansh-food.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")    
+    elif h==2:
+        get = int(input("Press 1 to retrieve Exercise\nPress 2 to retrieve Diet\n"))   
+        if get == 1:
+            with open("shivansh-ex.txt") as op:
+                for i in op:
+                    print(i,end="")  
+        elif get == 2:
+            with open("shivansh-food.txt") as op:
+                for i in op:
+                    print(i, end="")
+elif k==2:
+        r = int(input("Press 1 to log data\nPress 2 to retrieve data\n" ))
+        if r==1:
+            log = int(input("Press 1 to enter Exercise\nPress 2 to enter Diet\n"))
+            if log==1:
+                value=input("type here\n")
+                with open("ved-ex.txt","a") as op:
+                    op.write(str([str(gettime())])+": "+value+"\n")
+                print("successfully written")
+            elif log==2:
+                value = input("type here\n")
+                with open("ved-food.txt", "a") as op:
+                    op.write(str([str(gettime())]) + ": " + value + "\n")
+                print("successfully written")    
+        elif r==2:
+            get = int(input("Press 1 to retrieve Exercise\nPress 2 to retrieve Diet\n"))   
+            if get == 1:
+                with open("ved-ex.txt") as op:
+                    for i in op:
+                        print(i,end="")  
+            elif get == 2:
+                with open("ved-food.txt") as op:
+                    for i in op:
+                        print(i, end="")
+elif k==3:
+    m = int(input("Press 1 to log data\nPress 2 to retrieve data\n" ))
+    if m==1:
+        log = int(input("Press 1 to enter Exercise\nPress 2 to enter Diet\n"))
+        if log==1:
+            value=input("type here\n")
+            with open("sara-ex.txt","a") as op:
+                op.write(str([str(gettime())])+": "+value+"\n")
+            print("successfully written")
+        elif log==2:
+            value = input("type here\n")
+            with open("sara-food.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("successfully written")    
+    elif m==2:
+        get = int(input("Press 1 to retrieve Exercise\nPress 2 to retrieve Diet\n"))   
+        if get == 1:
+            with open("sara-ex.txt") as op:
+                for i in op:
+                    print(i,end="")  
+        elif get == 2:
+            with open("sara-food.txt") as op:
+                for i in op:
+                    print(i, end="")
+                       
+
+

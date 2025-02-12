@@ -75,7 +75,7 @@ elif k==3:
                     print(i,end="")  
         elif get == 2:
             with open("sara-food.txt") as op:
-                for i in :
+                for i in op:
                     print(i, end="")
                        
 
